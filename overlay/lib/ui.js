@@ -295,6 +295,13 @@
 
     setFooterVisibility()
 
+    // dualspiral edit: if the GET parameter includes "blur=1", set the blue by default
+    let returnString = window.location.search.substr(1)
+    if (returnString.includes("blur=1")) {
+      document.querySelector("[data-button=nameblur]").classList.add('enabled')
+      document.body.classList.add('nameblur')
+    }
+
   })
 
 
